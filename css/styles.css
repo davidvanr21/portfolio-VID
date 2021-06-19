@@ -1,90 +1,5 @@
-/* =================================================================== 
- * Flare Main Stylesheet
- * Template Ver. 1.0.0
- * 03-19-2020
- * ------------------------------------------------------------------
- *
- * TOC:
- * # settings and variables
- *      ## fonts
- *      ## colors
- *      ## vertical spacing and typescale
- *      ## grid variables
- * # normalize
- * # basic/base setup styles
- *      ## media
- *      ## typography resets
- *      ## links
- *      ## inputs
- * # Grid v3.0.0
- *      ## medium screen devices
- *      ## tablets
- *      ## mobile devices
- *      ## small mobile devices <= 400px
- * # block grids
- *      ## block grids - medium screen devices
- *      ## block grids - tablets
- *      ## block grids - mobile devices
- *      ## block grids - small mobile devices <= 400px
- * # MISC
- * # custom grid, block grid STACK breakpoints 
- * # base style overrides
- *      ## links
- * # typography & general theme styles
- *      ## lists
- *      ## responsive video container
- *      ## floated image
- *      ## tables
- *      ## spacing
- * # preloader
- * # forms 
- *      ## style placeholder text
- *      ## change autocomplete styles in Chrome
- * # buttons
- * # additional components
- *      ## additional typo styles
- *      ## skillbars
- *      ## alert box
- * # common and reusable styles
- *      ## item list 
- *      ## slick slider 
- * # site header
- *      ## header logo
- *      ## main navigation
- *      ## mobile menu toggle
- *      ## header contact button
- * # hero
- *      ## hero content
- *      ## hero video
- *      ## hero scroll
- *      ## animate intro content
- *      ## animations
- * # about
- *      ## about photo
- *      ## about process
- * # services
- * # portfolio
- *      ## portfolio list
- * # clients
- *      ## clients slider
- *      ## testimonials
- * # contact
- * # footer
- *      ## footer block
- *      ## footer list
- *      ## copyright
- *      ## go top
- *
- * ------------------------------------------------------------------ */
 
-
-
-/* ===================================================================
- * # settings and variables
- *
- * ------------------------------------------------------------------- */
-
-/* ------------------------------------------------------------------- 
+ /* ------------------------------------------------------------------- 
  * ## fonts
  * ------------------------------------------------------------------- */
 
@@ -104,26 +19,6 @@
  * ## colors
  * ------------------------------------------------------------------- */
 :root {
-/* ORGINIAL */
-    /* color-1(#d9083c)
-     * color-2(#eb5e55)
-     * color-3(#f2d0a4)
-     */
-    /* --color-1: hsla(345, 93%, 44%, 1);
-    --color-2: hsla(4, 79%, 63%, 1);
-    --color-3: hsla(34, 75%, 80%, 1); */
-
-    /* theme color variations orginial */
-    /* --color-1-lighter: hsla(345, 93%, 64%, 1);
-    --color-1-light  : hsla(345, 93%, 54%, 1);
-    --color-1-dark   : hsla(345, 93%, 34%, 1);
-    --color-1-darker : hsla(345, 93%, 24%, 1);
-    --color-2-lighter: hsla(4, 79%, 83%, 1);
-    --color-2-light  : hsla(4, 79%, 73%, 1);
-    --color-2-dark   : hsla(4, 79%, 53%, 1);
-    --color-2-darker : hsla(4, 79%, 43%, 1); */
-
-/* ADJUSTED */
 
     --color-1: rgb(0, 0, 0);
     --color-2: rgb(31, 31, 31);
@@ -205,7 +100,7 @@
 
     /* others
      */
-    --color-body  : var(--color-1);
+    /* --color-body  : var(--color-1); */
     /* --color-bg    : #14171B; */
     --color-bg    : #ffffff;
     --color-border: var(--color-gray-17);
@@ -638,6 +533,12 @@ textarea {
     background: black;
     color: white;
 }
+
+.designVisionStrong {
+    font-weight: 800;
+    color: rgb(30, 184, 94);
+}
+
 /* ------------------------------------------------------------------- 
  * ## interactive
  * ------------------------------------------------------------------- */
@@ -1989,7 +1890,6 @@ dd {
  * ## responsive video container
  * ------------------------------------------------------------------- */
 .video-container {
-    position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
@@ -1999,11 +1899,12 @@ dd {
 .video-container object, 
 .video-container embed, 
 .video-container video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
 }
 
 
@@ -3148,11 +3049,14 @@ input::-moz-focus-inner {
     position: absolute;
     top: var(--vspace-0_75);
     left: 0;
-    background-color: black;
+    /* background-color: black; */
+    background-color: hsla(0,0%,100%,0.8);
+    /* -webkit-backdrop-filter: saturate(180%) blur(5px); */
+    backdrop-filter: saturate(180%) blur(5px); 
     top: 0px;
 }
 
-.s-header.offset {
+/* .s-header.offset {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
     -webkit-transition: all .5s;
@@ -3162,10 +3066,13 @@ input::-moz-focus-inner {
 .s-header.scrolling {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-}
+} */
 
 .s-header.sticky {
-    background-color: black;
+    /* background-color: black; */
+    background-color: hsla(0,0%,100%,0.8);
+    /* -webkit-backdrop-filter: saturate(180%) blur(5px); */
+    backdrop-filter: saturate(180%) blur(5px); 
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -3234,21 +3141,23 @@ input::-moz-focus-inner {
     list-style: none;
     font-family: var(--font-2);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 6rem;
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
     margin: 0;
     text-transform: uppercase;
     letter-spacing: .4em;
+    transition: 1s;
 }
 
 .s-header__nav a {
-    color: var(--color-gray-8);
+    color: var(--color-black);
 }
 
 .s-header__nav a:hover, .s-header__nav a:focus {
-    color: white !important;
+    transition: 1s;
+    font-weight: 600;
 }
 
 .s-header__nav li {
@@ -3271,7 +3180,7 @@ input::-moz-focus-inner {
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
-    color: white;
+    color: rgb(0, 0, 0);
     outline: none;
     -webkit-transition: all .5s;
     transition: all .5s;
@@ -3282,14 +3191,14 @@ input::-moz-focus-inner {
 
 .s-header__menu-toggle:hover, 
 .s-header__menu-toggle:focus {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .s-header__menu-toggle span {
     display: block;
     width: 2.4rem;
     height: 2px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     -webkit-transition: all .5s;
     transition: all .5s;
     font: 0/0 a;
@@ -3580,17 +3489,37 @@ input::-moz-focus-inner {
  * # hero
  *
  * ------------------------------------------------------------------- */
-.s-hero {
+/* .s-hero {
     background-color: #ffffff;
     width: 100%;
     height: 100vh;
     min-height: calc(25.5 * var(--space));
     overflow: hidden;
     position: relative;
+} */
+
+.s-hero {
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
 }
 
+.video-container iframe, 
+.video-container object, 
+.video-container embed, 
+.video-container video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
 .s-hero__bg {
-    background-image: url(../images/hero-bg.jpg);
+    /* background-image: url(../images/hero-bg.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
