@@ -56,56 +56,31 @@
         </div>
 
         <div class="s-header__content">
-    
             <nav class="s-header__nav-wrap">
                 <ul class="s-header__nav">
                     <!-- <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li> -->
-                    <li><a class="smoothscroll" href="index.html" title="Case">Case</a></li>
-                    <li><a class="smoothscroll" href="index.html" title="Process">Process</a></li>
-                    <li><a class="smoothscroll" href="index.html" title="Result">Result</a></li>
+                    <li><a class="smoothscroll" href="#case" title="Case">Case</a></li>
+                    <li><a class="smoothscroll" href="#process" title="Process">Process</a></li>
+                    <li><a class="smoothscroll" href="#result" title="Result">Result</a></li>
                 </ul>
             </nav> <!-- end s-header__nav-wrap -->
-
-            <!-- <a href="mailto:davidvanrumpt@gmail.com" class="btn btn--primary btn--small">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
-                Contact
-            </a> -->
-
         </div> <!-- end header-content -->
 
         <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-
     </header> <!-- end s-header -->
 
 
     <!-- hero
     ================================================== -->
     <section id="hero" class="s-hero target-section">
-
-        <img src="img/homepage/c-webtypography2-01.png" alt="">
-
-
-        <!-------------------------------------- Play button -->
-        <!-- <div class="s-hero__video">
-            <a class="s-hero__video-link" href="https://youtu.be/Vs8tZy4tpNo" data-lity="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
-                <span class="s-hero__video-text">Play Video</span>
-            </a>
-        </div> -->
-
+        <img src="img/homepage/c-interfaceMotion.png" alt="">
     </section> <!-- end s-hero -->
-</section> <!-- end s-services -->
 
-    <!-- services
+
+    <!-- content
     ================================================== -->
-    <section id="Case" class="s-Case">
-
+    <section id="case" class="s-case">
         <div class="row">
-            <div class="column large-12">
-                <div class="section-title" data-num="*" data-aos="fade-up">
-                    <h3 class="h6">Exclusive Design</h3>
-                </div>
-            </div>
             <div class="column large-6 w-900-stack">
                 <h1 class="display-1" data-aos="fade-up">
                     Visualised the feeling and sounds of scenes from the Blader Runner 2049.
@@ -120,22 +95,28 @@
                 </p>
             </div>
         </div>
+    </section>
 
-        <img src="img/work/c-webtypography/screenScene.2.png" alt="">
+        <img src="img/work/c-webtypography/screenScene.2.png" alt="" class="alignImgMiddle">
 
+    <section id="process" class="s-process">
         <div class="row">
             <div class="column large-6 w-900-stack">
                 <p class="lead" data-aos="fade-up">
-                Students of the Amsterdam University of Applied Sciences filled in a enquete
-                to collect a lot of data. I discovered that there were interesting insights visible
-                between introverted and extraverted students. Watch my visualisation of this project above
-                or <a href="davidvanr21.github.io/web-typography-20-21/" target="_blank">click here</a> to go through the project yourself.
+                The challenge this project was that we needed to make this project in CSS.
+                A super interesting way of approaching a project because you're going to think
+                in possibilities of code instead of a prototype tool for example.
+                As students we've forked a <a href="https://github.com/cmda-minor-vid/web-typography-20-21" target="_blank">
+                template file from Vasilis </a> . Inside this code were some basic files
+                which already contained the timing of the subtitles and the subtitles itself. To change
+                the timing of the subtitles, I needed to change to following code:
                 </p>
             </div>
 
-            <div class="column large-6 w-900-stack">
+            <div class="column large-6 w-900-stack" data-aos="fade-up">
                 <!-- <h3 class="h-add-bottom">Code</h3> -->
                     <pre><code>
+//Example code
 captions[0] = ['3.8','8.1'];
 captions[1] = ['8.1','10'];
 captions[2] = ['10.8','12.5'];
@@ -148,6 +129,24 @@ captions[6] = ['23.3','25.2'];
                     </code></pre>
             </div>
         </div>
+    </section>
+    
+    <section id="result" class="s-result">
+    <div class="row">
+        <div class="column large-12 intro">
+            <h1>Final Result</h1>
+            <p class="lead">The final project is worked out great and I would love to work on similair projects
+                somewhere in the future. I find it super interesting to work on a design that has to be designed
+                in another way than what normal is. Click on "watch project" to navigate to my GitHub page.
+                On the right side will be a link visible where you can watch the video and more information
+                about the process can be found in my wiki. Enjoy!
+            </p>
+            <a class="btn btn--primary" href="https://github.com/davidvanr21/web-typography-20-21" target="_blank">Watch Project</a>
+            <hr class="fancy">
+        </div>
+    </div> <!-- end row -->
+    </section>
+
 
     <!-- FOOTER
     ================================================== -->
@@ -187,8 +186,6 @@ captions[6] = ['23.3','25.2'];
             </div>
         </div>
     </footer>
-    
-
 
     <!-- Java Script
     ================================================== -->
