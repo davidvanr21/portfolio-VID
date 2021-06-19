@@ -539,6 +539,19 @@ textarea {
     color: rgb(30, 184, 94);
 }
 
+#case {
+    margin-top: 5%;
+}
+
+.alignImgMiddle {
+    max-height: 90%;
+    width: auto;
+    position: relative;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -0%)
+}
+
 /* ------------------------------------------------------------------- 
  * ## interactive
  * ------------------------------------------------------------------- */
@@ -2396,9 +2409,12 @@ button.btn--primary,
 input[type="submit"].btn--primary, 
 input[type="reset"].btn--primary, 
 input[type="button"].btn--primary {
-    background: var(--color-btn-primary);
+    /* background: var(--color-btn-primary);
     border-color: var(--color-btn-primary);
-    color: var(--color-btn-primary-text);
+    color: var(--color-btn-primary-text); */
+    background: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 /* Button primary hover */
@@ -3518,8 +3534,7 @@ input::-moz-focus-inner {
 
 
 
-.s-hero__bg {
-    /* background-image: url(../images/hero-bg.jpg); */
+/* .s-hero__bg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3552,7 +3567,7 @@ input::-moz-focus-inner {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, black), to(rgba(0, 0, 0, 0)));
     background: linear-gradient(180deg, black 10%, rgba(0, 0, 0, 0) 100%);
     opacity: .35;
-}
+} */
 
 
 /* ------------------------------------------------------------------- 
@@ -3623,29 +3638,6 @@ input::-moz-focus-inner {
     background-color: white;
     opacity: 0.94;
 }
-
-/* hero content social
- * ----------------------------------------------- */
-.s-hero__content-social {
-    display: inline-block;
-    font-size: 1.8rem;
-    line-height: var(--vspace-1);
-}
-
-.s-hero__content-social a {
-    color: white;
-    margin-right: 1.2rem;
-}
-
-.s-hero__content-social a:hover, 
-.s-hero__content-social a:focus {
-    color: var(--color-1-light);
-}
-
-.s-hero__content-social a:last-child {
-    margin-right: 0;
-}
-
 
 /* ------------------------------------------------------------------- 
  * ## hero video
